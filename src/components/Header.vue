@@ -16,7 +16,7 @@
             <input class="c-search__input u-input" placeholder="Search..." type="text"/>
           </div>
           <div class="header-icons-group">
-            <div class="c-header-icon basket"><span class="c-badge c-badge--header-icon">12</span><icon name="shopping-basket" scale="1.5"></icon></div>
+            <div class="c-header-icon basket"><span class="c-badge c-badge--header-icon">12</span><icon name="comments" scale="1.5"></icon></div>
             <div class="c-header-icon logout"><icon name="power-off" scale="1.5"></icon></div>
           </div>
         </div>
@@ -24,21 +24,35 @@
 
       <div class="l-sidebar">
         <div class="logo">
-          <div class="logo__txt">D</div>
+          <div class="logo__txt">AP</div>
         </div>
         <div class="l-sidebar__content">
           <nav class="c-menu js-menu">
             <ul class="u-list">
-              <li id="menu-flights" class="c-menu__item is-active" v-on:click='toggleTile'>
-                <b-tooltip target="menu-flights" placement="right"><strong>Flights</strong></b-tooltip>
-                <div class="c-menu__item__inner"><icon name="plane" scale="1.5"></icon>
-                  <div class="c-menu-item__title"><span>Flights</span></div>
-                </div>
+
+              <li id="menu-home" class="c-menu__item is-active" v-on:click='toggleTile'>
+                <router-link to="/">
+                  <b-tooltip target="menu-home" placement="right"><strong>Home</strong></b-tooltip>
+                  <div class="c-menu__item__inner"><icon name="fort-awesome" scale="1.5"></icon>
+                    <div class="c-menu-item__title"><span>Home</span></div>
+                  </div>
+                </router-link>
               </li>
-              <li id="menu-modules" class="c-menu__item has-submenu" v-on:click='toggleTile'>
-                <b-tooltip target="menu-modules" placement="right"><strong>Modules</strong></b-tooltip>
-                <div class="c-menu__item__inner"><icon name="puzzle-piece" scale="1.5"></icon>
-                  <div class="c-menu-item__title"><span>Modules</span></div>
+
+              <li id="menu-google" class="c-menu__item is-active" v-on:click='toggleTile'>
+                <router-link to="/">
+                <b-tooltip target="menu-google" placement="right"><strong>Google</strong></b-tooltip>
+                <div class="c-menu__item__inner"><icon name="google" scale="1.5"></icon>
+                  <div class="c-menu-item__title"><span>Google</span></div>
+                </div>
+                </router-link>
+              </li>
+
+              <li id="menu-aws" class="c-menu__item has-submenu" v-on:click='toggleTile'>
+                <router-link to="/">
+                <b-tooltip target="menu-aws" placement="right"><strong>AWS</strong></b-tooltip>
+                <div class="c-menu__item__inner"><icon name="amazon" scale="1.5"></icon>
+                  <div class="c-menu-item__title"><span>AWS</span></div>
                   <div class="c-menu-item__expand js-expand-submenu"><icon name="angle-down"></icon></div>
                 </div>
                 <ul class="c-menu__submenu u-list">
@@ -46,25 +60,36 @@
                   <li>Maps</li>
                   <li>Notifications</li>
                 </ul>
+                </router-link>
               </li>
-              <li id="menu-statics" class="c-menu__item has-submenu" v-on:click='toggleTile'>
-                <b-tooltip target="menu-statics" placement="right"><strong>Statics</strong></b-tooltip>
-                <div class="c-menu__item__inner"><icon name="area-chart" scale="1.5"></icon>
-                  <div class="c-menu-item__title"><span>Statistics</span></div>
+
+              <li id="menu-facebook" class="c-menu__item has-submenu" v-on:click='toggleTile'>
+                <router-link to="/">
+                <b-tooltip target="menu-facebook" placement="right"><strong>Facebook</strong></b-tooltip>
+                <div class="c-menu__item__inner"><icon name="facebook-square" scale="1.5"></icon>
+                  <div class="c-menu-item__title"><span>Facebook</span></div>
                 </div>
+                </router-link>
               </li>
-              <li id="menu-gifts" class="c-menu__item has-submenu" v-on:click='toggleTile'>
-                <b-tooltip target="menu-gifts" placement="right"><strong>Gifts</strong></b-tooltip>
-                <div class="c-menu__item__inner"><icon name="gift" scale="1.5"></icon>
-                  <div class="c-menu-item__title"><span>Gifts</span></div>
+
+              <li id="menu-github" class="c-menu__item has-submenu" v-on:click='toggleTile'>
+                <router-link to="/">
+                <b-tooltip target="menu-github" placement="right"><strong>Github</strong></b-tooltip>
+                <div class="c-menu__item__inner"><icon name="github-square" scale="1.5"></icon>
+                  <div class="c-menu-item__title"><span>Github</span></div>
                 </div>
+                </router-link>
               </li>
+
               <li id="menu-settings" class="c-menu__item has-submenu" v-on:click='toggleTile' data-toggle="tooltip" title="Settings">
+                <router-link to="/">
                 <b-tooltip target="menu-settings" placement="right"><strong>Settings</strong></b-tooltip>
                 <div class="c-menu__item__inner"><icon name="cogs" scale="1.5"></icon>
                   <div class="c-menu-item__title"><span>Settings</span></div>
                 </div>
+                </router-link>
               </li>
+
             </ul>
           </nav>
         </div>
